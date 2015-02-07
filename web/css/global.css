@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 全局样式 */
+
+* {
+	margin:0;
+	padding:0;
+	font-size:14px; 
+}
+	
+ul,
+ol,
+li {
+	list-style:none; 
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+	color:inherit;
+	text-decoration:none;
+	outline:none; 
+}
+
+
+#bg {
+   z-index: -100;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}

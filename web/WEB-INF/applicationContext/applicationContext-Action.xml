@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 路径：web/WEB-INF/ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <!-- 图片Action -->
+    <bean id="PicAction" class="cc.cateyes.action.PicAction" scope="prototype">
+        <property name="catService" ref="catService" />
+        <property name="picService" ref="picService" />
+        <property name="userActService" ref="userActService" />
+        <property name="cat" ref="cat" />
+        <property name="PIC_SAVE_DIRECTORY_PATH" value="pics" />
+    </bean>    
+    <!-- 管理员Action -->
+    <bean id="AdminAction" class="cc.cateyes.action.AdminAction" scope="prototype">
+        <property name="adminService" ref="adminService" />
+        <property name="catService" ref="catService" />
+        <property name="picService" ref="picService" />
+        <property name="PIC_SAVE_DIRECTORY_PATH" value="pics" />
+    </bean>    
+
+</beans>

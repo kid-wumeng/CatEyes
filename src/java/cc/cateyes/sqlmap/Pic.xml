@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"  
+"http://ibatis.apache.org/dtd/sql-map-2.dtd"> 
+
+<sqlMap>
+    <!-- 配置类别名 -->
+    <!-- 网站分类 -->
+    <typeAlias alias="Pic" type="cc.cateyes.pojo.Pic" />
+    
+    <!-- 配置对象关系映射 -->
+    
+    <!-- 配置SQL语句 -->
+    <!-- 查询单张图片 -->
+    <procedure id="selectPic" parameterClass="Pic" resultClass="Pic">
+        CALL selectPic(#picId#);
+    </procedure>
+    <!-- 查询多张图片 -->
+    <procedure id="selectPics" parameterClass="Pic" resultClass="Pic">
+        CALL selectPics(
+                    #catId#,
+                    #picPublishDateTime#,
+                    #picNum#
+        );
+    </procedure>
+    <!-- 添加图片 -->
+    <procedure id="addPic" resultClass="Pic">
+        CALL addPic();
+    </procedure>
+    <!-- 修改图片 -->
+    <procedure id="modifyPic" parameterClass="Pic" resultClass="long">
+        CALL modifyPic(
+                  #picId#,
+                  #picWidth#,
+                  #picHeight#,
+                  #picDesc#,
+                  #picPublishDateTime#,
+                  #catId#
+        );
+    </procedure>
+    <!-- 查询最后的发布时间 -->
+    <procedure id="selectMaxPublishDateTime" parameterClass="string" resultClass="date">
+        CALL selectMaxPublishDateTime(#catId#);
+    </procedure>
+
+</sqlMap>

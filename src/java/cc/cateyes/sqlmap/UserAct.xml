@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"  
+"http://ibatis.apache.org/dtd/sql-map-2.dtd"> 
+
+<sqlMap>
+    <!-- 配置类别名 -->
+    <!-- 网站分类 -->
+    <typeAlias alias="UserAct" type="cc.cateyes.pojo.UserAct" />
+    
+    <!-- 配置对象关系映射 -->
+    
+    <!-- 配置SQL语句 -->
+    <!-- 添加用户行为（选择分类） -->
+    <procedure id="addUserAct_selectCat" parameterClass="UserAct">
+        CALL addUserAct_selectCat(
+                  #userIPAddress#,
+                  #catId#,
+                  #more#
+        );
+    </procedure>
+    
+</sqlMap>

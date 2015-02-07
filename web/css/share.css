@@ -1,0 +1,17 @@
+#share {
+    position: fixed;
+    bottom: 20px;
+}
+#share h1 {
+    height: 38px;
+    line-height: 42px;
+    text-align: center;
+    color: #4a4a4a;
+    border-top: 1px solid #fefcfc;
+    border-bottom: 1px solid #fefcfc;
+    box-shadow: 0 0px 2px #999;
+}
+#share .passit_barDiv {
+    display: none;
+    width: 380px;  /* 一个图标是 38 * 38 像素 */
+}

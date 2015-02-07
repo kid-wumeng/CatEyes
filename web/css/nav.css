@@ -1,0 +1,126 @@
+#nav {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: url(../images/nav-bg.png) center repeat-x;
+    z-index: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+
+#nav #logo {
+    width: 200px;
+    height: 40px;
+    float: left;
+    background: url(../images/logo.png) center no-repeat;
+}
+
+
+#nav #aboutUs {
+    float: left;
+    position: relative;
+}
+#nav #aboutUs h1 {
+    width: 80px;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: normal;
+    color: #8C63A4;
+}
+#nav #aboutUs div {
+    display: none;
+    position: absolute;
+    left: 0;
+    top:40px;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #000;
+}
+#nav #aboutUs div p {
+    padding: 10px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #8C63A4;
+}
+
+#nav #home {
+    float: left;
+    width: 80px;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: normal;
+    color: #8C63A4;
+}
+#nav #home:hover {
+    text-shadow: 1px 1px 1px #AA87B8;
+}
+
+#nav #cats li {
+    float: right;
+    position: relative;
+}
+
+#nav #cats li h1 {
+    display: block;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    clear: both;
+    text-align: center;
+}
+
+#nav #cats li#animal h1 { color: #BD6B09; }
+#nav #cats li#plant h1 { color: #1d953f; }
+
+#nav #cats li div {
+    display: none;
+    position: absolute;
+    right: 0;
+    top:40px;
+    width: 605px;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #000;
+}
+#nav #cats li div a {
+    float: left;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    width: 120px;
+    height: 30px;
+    color: #fff;
+}
+#nav #cats li div a.a { background-color: #bd6b09; }
+#nav #cats li div a.b { background-color: #7fb80e; }
+#nav #cats li div a.c { background-color: #a1a3a6; }
+#nav #cats li div a.d { background-color: #009ad6; }
+#nav #cats li div a.e { background-color: #8f006d; }
+
+#nav #cats li div a:hover {
+    position: relative;
+    box-shadow: 2px 2px 2px #000;
+}
+
+#nav #cats li div a span {
+    display: block;
+    text-indent: 10px;
+    line-height: 30px;
+}
+
+#nav form#go {
+    display: none;
+}
+
+#wrap {
+    margin: 60px auto;
+}

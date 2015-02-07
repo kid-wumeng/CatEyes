@@ -1,0 +1,27 @@
+form {
+    margin: 50px auto;
+    width: 725px;
+    display: block;
+}
+
+form div {
+    margin-bottom: 7px;
+}
+form div span {
+    display: inline-block;
+    margin-right: 5px;
+    width: 20px;
+    font-weight: bold;
+    color: #9933ff;
+    text-align: right;
+}
+form div .clear {
+    padding: 1px 3px;
+    font-size: 12px;
+}
+form #upload {
+    margin-right: 2px;
+    margin-top: 20px;
+    float: right;
+    padding: 5px 10px;
+}

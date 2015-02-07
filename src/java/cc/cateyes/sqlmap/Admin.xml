@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"  
+"http://ibatis.apache.org/dtd/sql-map-2.dtd"> 
+
+<sqlMap>
+    <!-- 配置类别名 -->
+    <!-- 网站分类 -->
+    <typeAlias alias="Admin" type="cc.cateyes.pojo.Admin" />
+    
+    <!-- 配置对象关系映射 -->
+    
+    <!-- 配置SQL语句 -->
+    <!-- 查询管理员 -->
+    <procedure id="selectAdmin" parameterClass="Admin" resultClass="Admin">
+        CALL selectAdmin(
+                  #adminAccount#,
+                  #adminPass#
+        );
+    </procedure>
+    
+</sqlMap>

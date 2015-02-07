@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- 路径：src/java/ -->
+
+<struts>
+    
+    <!-- 图片Action -->
+    <package name="Pic" extends="struts-default">
+        
+        <global-results>
+            <result name="success">/waterfall.jsp</result>
+            <result name="more">/ajax/pics.jsp</result>
+        </global-results>
+        
+        <!-- 显示导航 -->
+        <action name="nav" class="PicAction" method="showNav">
+            <result name="success">/nav.jsp</result>
+        </action>
+        <!-- 显示单张图片 -->
+        <action name="pic" class="PicAction" method="showPic">
+            <result name="success">/pic.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+        <action name="downloadPic" class="PicAction" method="downloadPic">
+            <result type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="inputName">inputStream</param>
+                <param name="contentDisposition">attachment;filename="${id}.jpg"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        
+        <!-- 分类 -->
+        <action name="New" class="PicAction" method="showPics" />     
+        <action name="More" class="PicAction" method="showPics" />
+        
+        <!-- 动物a（哺乳类） -->
+        <!-- 01 猫 --><action name="Cat" class="PicAction" method="showPics" />     
+        <!-- 02 狗 --><action name="Dog" class="PicAction" method="showPics" />     
+        <!-- 03 兔 --><action name="Rabbit" class="PicAction" method="showPics" />     
+        <!-- 04 鼠 --><action name="Mouse" class="PicAction" method="showPics" />     
+        <!-- 05 狮 --><action name="Lion" class="PicAction" method="showPics" />     
+        <!-- 06 虎 --><action name="Tiger" class="PicAction" method="showPics" />     
+        <!-- 07 豹 --><action name="Leopard" class="PicAction" method="showPics" />     
+        <!-- 08 狼 --><action name="Wolf" class="PicAction" method="showPics" />     
+        <!-- 09 狐狸 --><action name="Fox" class="PicAction" method="showPics" />     
+        <!-- 10 熊 --><action name="Bear" class="PicAction" method="showPics" />     
+        <!-- 11 熊猫 --><action name="Panda" class="PicAction" method="showPics" />     
+        <!-- 12 马 --><action name="Horse" class="PicAction" method="showPics" />     
+        <!-- 13 鹿 --><action name="Deer" class="PicAction" method="showPics" />     
+        <!-- 14 象 --><action name="Elephant" class="PicAction" method="showPics" />     
+        <!-- 15 猪 --><action name="Pig" class="PicAction" method="showPics" />     
+        <!-- 16 灵长类 --><action name="Primate" class="PicAction" method="showPics" />     
+        
+        <!-- 动物b（两栖爬行类） -->
+        <!-- 01 蛙 --><action name="Frog" class="PicAction" method="showPics" />     
+        <!-- 02 龟 --><action name="Tortoise" class="PicAction" method="showPics" />     
+        <!-- 03 变色龙 --><action name="Chameleon" class="PicAction" method="showPics" />     
+        
+        <!-- 动物c（鸟类） -->
+        <!-- 01 小鸟类 --><action name="Birdie" class="PicAction" method="showPics" />     
+        <!-- 02 鹰 --><action name="Eagle" class="PicAction" method="showPics" />     
+        <!-- 03 企鹅 --><action name="Penguin" class="PicAction" method="showPics" />     
+        <!-- 04 家禽类 --><action name="Poultry" class="PicAction" method="showPics" />     
+        
+        <!-- 动物d（水生类） -->
+        <!-- 01 鱼类 --><action name="Fish" class="PicAction" method="showPics" />     
+        <!-- 02 海豚 --><action name="Dolphin" class="PicAction" method="showPics" />     
+        <!-- 03 鲸 --><action name="Whale" class="PicAction" method="showPics" />     
+        <!-- 04 叶海龙 --><action name="LeafySeaDragons" class="PicAction" method="showPics" />     
+        <!-- 05 海洋哺乳类 --><action name="MarineMammal" class="PicAction" method="showPics" />     
+        <!-- 06 海洋甲壳类 --><action name="MarineCrustacean" class="PicAction" method="showPics" />     
+        <!-- 07 海洋软体类 --><action name="MarineMollusc" class="PicAction" method="showPics" />     
+        
+        <!-- 动物e（昆虫类） -->
+        <!-- 01 蝴蝶 --><action name="Butterfly" class="PicAction" method="showPics" />     
+        
+    </package>
+    
+</struts>

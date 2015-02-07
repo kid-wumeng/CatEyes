@@ -1,0 +1,22 @@
+body {
+    background: url(../images/bg.gif) center repeat;
+}
+
+#pic {
+    text-align: center;
+    position: relative;
+}
+
+#pic img {
+    display: none;
+    margin: 0 auto;
+    border: 15px solid #fff;
+    box-shadow: 0px 0px 10px #999;
+}
+
+#pic a {
+    display: none;
+}
+a#download {
+    display: none
+}

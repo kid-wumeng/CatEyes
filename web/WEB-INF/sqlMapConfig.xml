@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">  
+  
+<sqlMapConfig>  
+    <!-- 配置对象关系映射文件 -->  
+    <sqlMap resource="cc/cateyes/sqlmap/Cat.xml" />  
+    <sqlMap resource="cc/cateyes/sqlmap/Pic.xml" />  
+    <sqlMap resource="cc/cateyes/sqlmap/Admin.xml" />  
+    <sqlMap resource="cc/cateyes/sqlmap/UserAct.xml" />  
+</sqlMapConfig>  

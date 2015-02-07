@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- 路径：src/java/ -->
+
+<struts>
+    
+    <package name="Admin" extends="struts-default" namespace="/admin">
+        
+        <!-- 登录 -->
+        <action name="login" class="AdminAction" method="login">
+            <result name="success">uploadPics.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+        <!-- 上传图片 -->
+        <action name="uploadPics" class="AdminAction" method="uploadPics">
+            <result name="success">editPics.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!-- 编辑图片 -->
+        <action name="editPics" class="AdminAction" method="editPics">
+            <result name="success" type="redirect">uploadPics.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!-- 显示最后的发布时间 -->
+        <action name="maxPublishDateTime" class="AdminAction" method="showMaxPublishDateTime">
+            <result name="success">/ajax/pics.jsp</result>
+        </action>
+        
+    </package>
+    
+</struts>
